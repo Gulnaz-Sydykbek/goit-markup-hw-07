@@ -1,0 +1,37 @@
+.header {
+	border-bottom: 1px solid $line-color;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.item {
+	position: relative;
+
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
+}
+
+.nav-link {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	display: flex;
+	align-items: center;
+
+	font-weight: 500;
+	font-size: $main-font-size;
+	line-height: 1.143;
+	letter-spacing: 0.02em;
+	color: $first-color;
+	transition-property: color, fill;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: $dark-color;
+		fill: $dark-color;
+	}
+}

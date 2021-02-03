@@ -1,0 +1,58 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	@extend %size;
+	background-color: $overlay;
+
+	z-index: 1;
+	transition-property: transform;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	min-width: 528px;
+	min-height: 581px;
+	background-color: $second-color;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.close-button {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 8px;
+	right: 8px;
+
+	cursor: pointer;
+	background-color: $second-color;
+	border: 1px solid $close-button-border;
+	border-radius: 50%;
+	box-sizing: border-box;
+	transition-property: color, fill;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		fill: $dark-color;
+	}
+}
+
+.close-vector {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

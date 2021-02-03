@@ -1,0 +1,43 @@
+.connection {
+	margin-left: auto;
+	display: flex;
+}
+
+.header-link {
+	color: $light-color;
+	fill: $light-color;
+}
+
+.link-icon {
+	margin-right: 10px;
+}
+
+.address {
+	margin-top: 20px;
+
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: $main-font-size;
+	line-height: 1.714;
+	letter-spacing: 0.03em;
+	color: $second-color;
+}
+
+.footer-item {
+	margin-top: 9px;
+}
+
+.footer-link {
+	font-size: $main-font-size;
+	line-height: 1.714;
+	letter-spacing: 0.03em;
+	color: $footer-conection-color;
+	transition-property: color;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: $dark-color;
+	}
+}
